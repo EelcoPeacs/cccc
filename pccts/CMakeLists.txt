@@ -28,13 +28,6 @@ add_executable(antlr ${ANTLR_SOURCES})
 set_target_properties(antlr PROPERTIES LINKER_LANGUAGE C)
 set_target_properties(antlr PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
 set_target_properties(antlr PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-#foreach( OUTPUTCONFIG ${CMAKE_CONFIGURATION_TYPES} )
-#    string( TOUPPER ${OUTPUTCONFIG} OUTPUTCONFIG )
-#    set_target_properties(antlr PROPERTIES RUNTIME_OUTPUT_DIRECTORY_${OUTPUTCONFIG} "${CMAKE_BINARY_DIR}/bin" )
-#endforeach( OUTPUTCONFIG CMAKE_CONFIGURATION_TYPES )
-
-#install(TARGETS antlr CONFIGURATIONS Debug DESTINATION ../bin/debug)
-#install(TARGETS antlr CONFIGURATIONS Release DESTINATION ../bin/release)
 
 
 # Build the dlg application
@@ -57,14 +50,9 @@ add_executable(dlg ${DLG_SOURCES})
 set_target_properties(dlg PROPERTIES LINKER_LANGUAGE C)
 set_target_properties(dlg PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
 set_target_properties(dlg PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-#foreach( OUTPUTCONFIG ${CMAKE_CONFIGURATION_TYPES} )
-#    string( TOUPPER ${OUTPUTCONFIG} OUTPUTCONFIG )
-#    set_target_properties(dlg PROPERTIES RUNTIME_OUTPUT_DIRECTORY_${OUTPUTCONFIG} "${CMAKE_BINARY_DIR}/bin" )
-#endforeach( OUTPUTCONFIG CMAKE_CONFIGURATION_TYPES )
 
-#install(TARGETS dlg CONFIGURATIONS Debug DESTINATION ../bin/debug)
-#install(TARGETS dlg CONFIGURATIONS Release DESTINATION ../bin/release)
 
+# The next applications are not used by CCCC
 
 ## Build the sorcerer application
 
@@ -88,8 +76,6 @@ set_target_properties(dlg PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DI
 #set_target_properties (sorcerer PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
 #set_target_properties(sorcerer PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
-##install(TARGETS sorcerer CONFIGURATIONS Debug DESTINATION ../bin/debug)
-##install(TARGETS sorcerer CONFIGURATIONS Release DESTINATION ../bin/release)
 
 
 ## Build the genmk application
@@ -104,6 +90,3 @@ set_target_properties(dlg PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DI
 #set_target_properties(genmk PROPERTIES LINKER_LANGUAGE C)
 #set_target_properties (genmk PROPERTIES DEBUG_POSTFIX ${CMAKE_DEBUG_POSTFIX})
 #set_target_properties(genmk PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-
-##install(TARGETS genmk CONFIGURATIONS Debug DESTINATION ../bin/debug)
-##install(TARGETS genmk CONFIGURATIONS Release DESTINATION ../bin/release)

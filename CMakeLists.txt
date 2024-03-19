@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
 
-#project(cccc LANGUAGES C)
 project(cccc)
 
 set(CMAKE_CXX_STANDARD 17)
