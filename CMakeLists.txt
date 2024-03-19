@@ -8,15 +8,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Make sure to not link debug libs
 # against release libs and vice versa
-if(WIN32)
-  SET(CMAKE_DEBUG_POSTFIX "d" CACHE STRING "Add postfix to debug build")
-endif(WIN32)
-
 #if(WIN32)
-#    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /D_CONSOLE")
-#    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE")
-
-#    MESSAGE(STATUS "     CMAKE_EXE_LINKER_FLAGS ............. : ${CMAKE_EXE_LINKER_FLAGS}")
+#  SET(CMAKE_DEBUG_POSTFIX "d" CACHE STRING "Add postfix to debug build")
 #endif(WIN32)
 
 
@@ -56,10 +49,3 @@ add_subdirectory(pccts)
 
 # Add the final cccc application
 add_subdirectory(cccc)
-
-
-
-#add_executable(cccc main.cpp)
-
-#install(TARGETS cccc
-#    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
